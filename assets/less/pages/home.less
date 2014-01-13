@@ -15,7 +15,7 @@
 
 
   margin: 0;
-  background-color: $red;
+  background-color: @red;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 0;
@@ -35,23 +35,27 @@
   .event{
     margin: 40px 0;
     padding: 20px 40px 20px 20px;
-    background-color: $darkGrey;
+    background-color: @darkGrey;
     font-size: 12px;
+
     p{
       margin:0;
-      font-family: 'Merriweather-sans', sans-serif;
+      font-family: @sansSerif;
     }
+
     p.when{
       text-transform: uppercase;
     }
+    
     p.title{
       margin: 10px 0px 10px 0;
-      color: $white;
+      color: @white;
       font-weight: 700;
       font-size: 18px;
     }
+    
     p.desc{
-      font-family: 'Merriweather', serif;
+      font-family: @serif;
     }
     
   } //end event
@@ -61,24 +65,38 @@
 
     h4.title{
       font-weight: 700;
-      background-color: $red;
+      background-color: @red;
       padding: 20px 80px 20px 20px;
       margin: 0;
+
+      a{
+        color: @tan;
+      }
+
+      a:hover{
+        color: darken(@tan, 10%);
+      }
     }
     p.desc{
       margin: 0;
-      background-color: $darkTan;
+      background-color: @darkTan;
       font-size: 12px;
-      color: $darkGrey;
+      color: @darkGrey;
       padding: 20px 20px 40px 20px;
-    }
-    .more{
-      text-transform: uppercase;
-      color: $red;
-      font-size: 10px;
-      font-weight: 700;
-      margin-left: 10px;
-      font-family: 'Merriweather-sans', sans-serif;
+
+      a{
+        text-transform: uppercase;
+        color: @red;
+        font-size: 10px;
+        font-weight: 700;
+        margin-left: 10px;
+        font-family: @sansSerif;
+      }
+
+      a:hover{
+        color: darken(@red, 10%);
+      }
+
     }
   }//end info-box
 
@@ -116,7 +134,7 @@
       margin: 0;
       margin-top: 20px;
       margin-bottom: 10px;
-      background-color: $tan;
+      background-color: @tan;
       color: @darkGrey;
       font-weight: 300;
       font-size: 12px;
@@ -125,7 +143,7 @@
     }
   
     a{
-      color: $tan;
+      color: @tan;
     }
   
     a:hover{
@@ -171,7 +189,7 @@
   }
   
   .intro{
-    font-family: "Merriweather-Sans", sans-serif;
+    font-family: @sansSerif;
     font-weight: 700;
     font-size: 16px;
   }

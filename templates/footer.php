@@ -66,7 +66,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-5">
-          <p>>&copy; <?php echo date('Y'); ?> University of Maryland <?php bloginfo('name'); ?></p>
+          <p>&copy; <?php echo date('Y'); ?> University of Maryland <?php bloginfo('name'); ?></p>
         </div>
         <div class="col-md-4 col-md-offset-3"><a href="#facebook"><i class="fa fa-facebook"><span>Facebook</span></i></a><a href="#twitter"><i class="fa fa-twitter"><span> Twitter </span></i></a><a href="#linkedin"><i class="fa fa-linkedin"><span> Linkedin </span></i></a><a href="#email"><i class="fa fa-envelope"><span> Email       </span></i></a></div>
       </div>

@@ -72,53 +72,31 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div class="info-box">
-          <h4 class="title">Actually kitsch fanny pack tattooed, Etsy bespoke Helvetica</h4>
-          <p class="desc">
-            Cardigan beard typewriter, quinoa flexitarian ennui letterpress 
-            flannel. Bitters selfies McSweeney's pour-over Banksy flexitarian. 
-            Fingerstache polaroid Terry Richardson, authentic Echo Park tousled 
-            Intelligentsia pickled keytar raw denim vegan ennui Thundercats 
-            stumptown flannel food truck, literally paleo authentic brunch pop-up 
-            kale chips 3 wolf moon ethnic. Artisan PBR&B whatever Carles forage 
-            kale chips.<span class="more">Read More ... </span>
-          </p>
+      <?php
+        $args = array(
+          'limit' => 4,
+          'posts_per_page' => 4
+        );
+
+        $custom_query = new WP_Query($args);
+
+        while($custom_query->have_posts()) : $custom_query->the_post();
+
+      ?>
+      
+        <div class="col-md-6">
+          <div class="info-box">
+            <h4 class="title"><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h4>
+            <p class="desc">
+              <?php echo get_the_excerpt(); ?>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="info-box">
-          <h4 class="title">Actually kitsch fanny pack tattooed, Etsy bespoke Helvetica</h4>
-          <p class="desc">
-            Cardigan beard typewriter, quinoa flexitarian ennui letterpress 
-            flannel. Bitters selfies McSweeney's pour-over Banksy flexitarian. 
-            Fingerstache polaroid Terry Richardson, authentic Echo Park tousled 
-            Intelligentsia pickled keytar raw denim vegan ennui Thundercats 
-            stumptown flannel food truck, literally paleo authentic brunch pop-up 
-            kale chips 3 wolf moon ethnic. Artisan PBR&B whatever Carles forage 
-            kale chips.<span class="more">Read More ...</span>
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="info-box">
-          <h4 class="title">Actually kitsch fanny pack tattooed, Etsy bespoke Helvetica </h4>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="info-box">
-          <h4 class="title">Actually kitsch fanny pack tattooed, Etsy bespoke Helvetica</h4>
-          <p class="desc">
-            Cardigan beard typewriter, quinoa flexitarian ennui letterpress 
-            flannel. Bitters selfies McSweeney's pour-over Banksy flexitarian. 
-            Fingerstache polaroid Terry Richardson, authentic Echo Park tousled 
-            Intelligentsia pickled keytar raw denim vegan ennui Thundercats 
-            stumptown flannel food truck, literally paleo authentic brunch pop-up 
-            kale chips 3 wolf moon ethnic. Artisan PBR&B whatever Carles forage 
-            kale chips.<span class="more">Read More ...</span>
-          </p>
-        </div>
-      </div>
+
+      <?php
+        endwhile;
+      ?>
+      
     </div>
   </div>
 </div>
