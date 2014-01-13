@@ -2,13 +2,63 @@
  * Roots 6.5.1
  */
 
-@import "bootstrap/bootstrap.less";
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+/*Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800);
+
+@import "variables.less";
+@import "bootstrap/bootstrap.less";
+
+body{
+  font-family: @sansSerif;
+
+}
+p{
+  font-size: 12px;
+  font-family: @serif;
+  margin: 0;
+}
+
+
+h1{
+  font-size:72px;
+  font-weight: 800;
+  margin: 0;
+}
+h2{
+  font-size: 60px;
+  margin: 0;
+}
+h3{
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+
+}
+h4{
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+h5{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+h6{
+  font-size: 12px;
+  margin: 0;
+}
+
+
+body { 
+   background-color: @tan;
+}
 
 
 
@@ -18,7 +68,63 @@ body { }
 
 .banner { }
 
+#navigation{
+      li{
+      color: @red;
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
 
+      display: inline;
+      margin-right: 60px;
+
+      a{
+         text-decoration: none;
+         color: @red;
+      }
+      a:hover{
+         color: @red;
+      }
+
+   }
+}
+
+
+.ultra-heading{
+  font-weight: 800;
+  font-size: 72px;
+  color: @red;
+  text-transform: uppercase;
+  background-color: @tan;
+  padding: 24px 72px 24px 24px;
+  margin-bottom: 18px;
+}
+
+.reg-heading{
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: @red;
+  padding: 20px 20px 20px 40px;
+}
+//temp fix
+.container-full{
+  width: 1200px;
+}
+
+.quote{
+  h2{
+    font-weight: 700;
+    font-family: @serif;
+  }
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  text-align: right;
+  background-color: $red;
+  text-shadow: 10px 10px 50px @black;
+}
 
 /* ==========================================================================
    Content
@@ -63,8 +169,107 @@ body { }
    Footer
    ========================================================================== */
 
-.content-info { }
+#footer{
 
+  background-color: $black;
+  padding-top: 40px;
+  padding-bottom:40px;
+
+  p{
+    font-family: @sansSerif;
+    color: @darkGrey;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .give-us-your-email{
+
+    #email-input{
+      width: 100%;
+      padding: 0;
+      background-color: $black;
+      border: none;
+      border-bottom: 1px solid @darkGrey;
+        
+      color: @darkGrey;
+      font-family: @serif;
+      font-size: 60px;
+    }
+
+    #email-input:focus{
+      outline: none;
+    }
+
+  }// end give us your email
+
+  .links{
+    margin-top: 60px;
+   
+    .col-md-offset-1{
+      margin-left: 5%;
+    }
+   
+    a{
+      color: #cbc9bf;
+    }
+
+    ul{
+      list-style-type: none;
+      padding: 0;
+      font-size: 12px;
+      color: #cbc9bf;
+      text-transform: uppercase;
+      border-left: 1px solid @darkGrey;
+      padding-left: 8px;
+
+      span{
+        color: $red;
+      }
+
+      li{
+        padding: 2px;
+      }
+
+
+    }//end ul
+
+  }//end links
+
+
+
+  // for bottom border
+  .content{
+    border-bottom: 1px solid @darkGrey;
+    padding-bottom: 40px;
+  }
+
+
+  .bottom-content{
+    font-size: 12px;
+    font-weight: 400;
+    
+    i{
+      color: $red;
+      margin-top: 14px;
+    }
+  
+    span{
+      color: @darkGrey;
+      margin-left: 6px;
+      margin-right: 18px;
+      text-transform: uppercase;
+
+    }
+
+  }
+
+} //end footer
+
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+@import "pages/home.less";
 
 
 /* ==========================================================================

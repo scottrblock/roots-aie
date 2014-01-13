@@ -26,7 +26,7 @@ function roots_main_class() {
     $class = 'col-sm-12';
   }
 
-  return $class;
+  return "";
 }
 
 /**

@@ -1,0 +1,187 @@
+@import "../variables.less";
+
+//fearless education
+#fearless-education{
+
+  //this is so it stays responsive
+  .row{
+    margin: 0 ;
+    width: 100%;
+  }
+
+  .col-md-6.col-md-offset-6{
+    padding-right: 0;
+  }
+
+
+  margin: 0;
+  background-color: $red;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 0;
+
+  p{
+    padding: 0 30px 24px 24px;
+  }
+
+}//end fearless education
+
+
+//the latest
+#the-latest{
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .event{
+    margin: 40px 0;
+    padding: 20px 40px 20px 20px;
+    background-color: $darkGrey;
+    font-size: 12px;
+    p{
+      margin:0;
+      font-family: 'Merriweather-sans', sans-serif;
+    }
+    p.when{
+      text-transform: uppercase;
+    }
+    p.title{
+      margin: 10px 0px 10px 0;
+      color: $white;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    p.desc{
+      font-family: 'Merriweather', serif;
+    }
+    
+  } //end event
+
+  .info-box{
+    margin-bottom: 40px;
+
+    h4.title{
+      font-weight: 700;
+      background-color: $red;
+      padding: 20px 80px 20px 20px;
+      margin: 0;
+    }
+    p.desc{
+      margin: 0;
+      background-color: $darkTan;
+      font-size: 12px;
+      color: $darkGrey;
+      padding: 20px 20px 40px 20px;
+    }
+    .more{
+      text-transform: uppercase;
+      color: $red;
+      font-size: 10px;
+      font-weight: 700;
+      margin-left: 10px;
+      font-family: 'Merriweather-sans', sans-serif;
+    }
+  }//end info-box
+
+}//end the-latest
+
+//resource map
+#resource-map{
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .map{
+    margin-top: 40px;
+  }
+
+  ul{
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left:0px;
+
+    .width-full{
+      width: 100%;
+    }
+    
+    li{
+      display: inline-block;
+      background-color: @red;
+      padding: 6px;
+      padding-left: 12px;
+      margin-bottom: 6px;
+    }
+    
+    li.title{
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      background-color: $tan;
+      color: @darkGrey;
+      font-weight: 300;
+      font-size: 12px;
+      padding: 0;
+      text-transform: uppercase;
+    }
+  
+    a{
+      color: $tan;
+    }
+  
+    a:hover{
+      color: lighten(@red, 35%);
+    }
+  }
+
+  .resource-content{
+    background-color: @darkGrey;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .resource-content:hover{
+    background-color: lighten(@darkGrey, 10%);
+  }
+
+}//end resource-map
+
+//welcome
+#welcome{
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .content{
+    margin-top: 40px;
+  }
+
+  img{
+    margin-bottom: 20px;
+  }
+
+  p{
+    margin: 0;
+    color: @darkGrey;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .letter{
+    border-left: 1px solid rgba(98, 99, 102, 0.2);
+  }
+  
+  .intro{
+    font-family: "Merriweather-Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .who-is-it{
+    font-weight: 700;
+  }
+
+  .what-does-he-do{
+    font-style: italic;
+  }
+
+} //end welcome
