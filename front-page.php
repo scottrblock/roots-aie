@@ -30,46 +30,39 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <div class="event">
-          <p class="when">Friday, Nov 15 / 11 am - 1 pm</p>
-          <p class="title">Innovation Friday</p>
-          <p class="desc">
-            Ennui drinking vinegar four loko VHS sustainable, 
-            vinyl keytar post-ironic ugh coffee Truffaut.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="event">
-          <p class="when">Friday, Nov 15 / 11 am - 1 pm</p>
-          <p class="title">Innovation Friday</p>
-          <p class="desc">
-            Ennui drinking vinegar four loko VHS sustainable, 
-            vinyl keytar post-ironic ugh coffee Truffaut.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="event">
-          <p class="when">Friday, Nov 15 / 11 am - 1 pm</p>
-          <p class="title">Innovation Friday</p>
-          <p class="desc">
-            Ennui drinking vinegar four loko VHS sustainable, 
-            vinyl keytar post-ironic ugh coffee Truffaut.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="event">
-          <p class="when">Friday, Nov 15 / 11 am - 1 pm</p>
-          <p class="title">Innovation Friday</p>
-          <p class="desc">
-            Ennui drinking vinegar four loko VHS sustainable, 
-            vinyl keytar post-ironic ugh coffee Truffaut.
-          </p>
-        </div>
-      </div>
+      <?php
+        global $post;
+        $args = array(
+          'post_type' => 'event',
+          'meta_key' => 'wpcf-start-date',
+          'orderby' => 'meta_value_num',
+          'posts_per_page' => '-1',
+          'order' => 'ASC'
+        );
+
+        $custom_query = new WP_Query($args);
+        $counter = 0;
+        while($custom_query->have_posts()) : $custom_query->the_post();
+          $event_date = types_render_field("start-date", array("raw" => "true"));
+          if( $event_date > strtotime('now') && $counter < 4 ){
+      ?>
+      
+            <div class="col-md-3">
+              <div class="event">
+                <p class="when"><?php echo date("l, M jS / g:i a", $event_date); ?></p>
+                <p class="title"><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></p>
+                <p class="desc">
+                  <?php echo types_render_field("summary"); ?>
+                </p>
+              </div>
+            </div>
+
+      <?php
+          $counter = $counter + 1;
+          }
+        endwhile;
+      ?>
+
     </div>
     <div class="row">
       <?php

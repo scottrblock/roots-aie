@@ -12,7 +12,18 @@ var ExampleSite = {
   // Home page
   home: {
     init: function() {
-      // JS here
+      //equal heights of events
+
+      var largest_event_height = 0;
+      $('.event').each(function(){
+        console.log($(this).outerHeight());
+        var cur_height = $(this).outerHeight();
+        if( cur_height > largest_event_height ){
+          largest_event_height = cur_height;
+        }
+      });
+
+      $('.event').css('height', (largest_event_height + 20) + 'px');
     }
   },
   // About page
