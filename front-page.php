@@ -1,3 +1,8 @@
+<?php
+/**
+ * Template Name: Home Page
+ */
+?>
 <div id="fearless-education">
   <div class="special-container">
     <div class="row">
@@ -30,6 +35,12 @@
   </div>
   <div class="container">
     <div class="row">
+      <div id="upcoming-events">
+        <!-- populated with js -->
+      </div>
+    </div>
+
+    <div class="row">
       <?php
         global $post;
         $args = array(
@@ -58,13 +69,15 @@
             </div>
 
       <?php
-          $counter = $counter + 1;
-          }
+        }
+
+        $counter = $counter + 1;
         endwhile;
       ?>
 
     </div>
     <div class="row">
+      
       <?php
         $args = array(
           'limit' => 4,
@@ -74,9 +87,8 @@
         $custom_query = new WP_Query($args);
 
         while($custom_query->have_posts()) : $custom_query->the_post();
-
       ?>
-      
+        
         <div class="col-md-6">
           <div class="info-box">
             <h4 class="title"><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h4>
@@ -89,8 +101,62 @@
       <?php
         endwhile;
       ?>
-      
     </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div id="facebook-posts">
+          <?php
+            require 'facebook.php';
+
+            //Application 
+            $facebook = new Facebook(array(
+                'appId'  => '214224098776275',
+                'secret' => 'e4d6a26a7b89869bf493ccbd5b30a81b',
+                'cookie' => true, 
+            ));
+
+            $param  =   array(
+              'method'    => 'fql.query',
+              'query'     => "SELECT message FROM stream WHERE source_id= 210630815771359 AND actor_id= 210630815771359 AND message LIMIT 0, 4"
+            );
+            
+            $fqlResult   =   $facebook->api($param);
+            $counter = 0;
+
+            foreach( $fqlResult as  $rows ):
+              if ($counter % 2 == 0){
+               // echo "<div class='row'>";
+              }
+            ?>
+                <div class="info-box">
+                  <p class="desc">
+                    <?php echo $rows['message']; ?>
+                  </p>
+                </div>
+
+            <?php
+              if ($counter % 2 == 1){
+                //echo "</div>";
+              }
+
+              $counter = $counter + 1;
+
+              endforeach;
+            ?>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div id="twitter-posts">
+          <?php echo do_shortcode("[twitter-widget username='UMDInnovation' targetBlank='true' items='5' showts='181440000' showretweets='true' showintents='false' showfollow='false' hidefrom='true']"); ?>
+        </div>
+      </div>
+    </div>
+  
+
+      
   </div>
 </div>
 <div class="quote">
@@ -105,131 +171,7 @@
     </div>
   </div>
 </div>
-<div id="resource-map">
-  <div class="container-full">
-    <div class="row">
-      <div class="col-md-5">
-        <h1 class="reg-heading">Resource Map</h1>
-      </div>
-    </div>
-  </div>
-  <div class="container map">
-    <div class="col-md-2">
-      <ul class="text-right">
-        <li class="title">Type</li><a href="#courses">
-          <div class="width-full">
-            <li>Courses</li>
-          </div></a><a href="#programs">
-          <div class="width-full">
-            <li>Programs</li>
-          </div></a><a href="#competitions">
-          <div class="width-full">
-            <li>Competitions</li>
-          </div></a><a href="#organizations">
-          <div class="width-full">
-            <li>Organizations</li>
-          </div></a><a href="#tools">
-          <div class="width-full">
-            <li>Tools</li>
-          </div></a>
-        <li class="title">Stage</li><a href="#just-starting">
-          <div class="width-full">
-            <li>Just Starting</li>
-          </div></a><a href="#making-progress">
-          <div class="width-full">
-            <li>Making Progress</li>
-          </div></a><a href="#lift-off">
-          <div class="width-full">
-            <li>Lift Off</li>
-          </div></a>
-      </ul>
-    </div>
-    <div class="col-md-10">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="resource-content">
-            <p>shit goes here</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 <div class="quote">
   <div class="container">
     <div class="row">

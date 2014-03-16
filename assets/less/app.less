@@ -18,7 +18,7 @@ body{
   font-family: @sansSerif;
   font-size: 18px;
   line-height: 1.428571429;
-  color: @tan;
+  color: @black;
   background-color: @tan;
 
 }
@@ -26,6 +26,7 @@ p{
   font-family: @serif;
   font-family: @serif;
   font-weight: 300;
+  margin: 1em 0;
 }
 
 h1,
@@ -46,39 +47,26 @@ h6,
   color: inherit;
 }
 
-body { 
-   background-color: @tan;
+h1{ font-size: 48px; }
+h2{ font-size: 38px; }
+h3{ font-size: 31px; }
+h4{ font-size: 23px; }
+h5{ font-size: 18px; }
+h6{ font-size: 16px; }
+
+h1{
+  font-weight: 800;
+  color: @red;
+  text-transform: uppercase;
 }
 
-
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
-.banner { }
-
-#navigation{
-      li{
-      color: @red;
-      font-size: 18px;
-      font-weight: 800;
-      text-transform: uppercase;
-
-      display: inline;
-      margin-right: 60px;
-
-      a{
-         text-decoration: none;
-         color: @red;
-      }
-      a:hover{
-         color: @red;
-      }
-
-   }
+h6{
+  font-size: 18px;
+  color: @darkGrey;
+  font-weight: 300;
+  font-family: 'Merriweather', serif;
+  margin-top: 0;
 }
-
 
 .ultra-heading{
   font-weight: 800;
@@ -92,11 +80,75 @@ body {
 
 .reg-heading{
   margin: 0;
+  color: @red;
   text-transform: uppercase;
   font-weight: 700;
-  background-color: @red;
-  padding: 20px 20px 20px 40px;
+  font-size: 48px;
+  padding: 20px 20px 20px 0px;
 }
+
+
+body { 
+   background-color: @tan;
+}
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner { 
+  margin-bottom: 0;
+  padding-top: 20px;
+  background: @black;
+  border: 0;
+  
+  .container{
+
+    .navbar-brand{
+      text-indent: -32768px;
+      width: 210px;
+      height: 39px;
+      background-size: 100%;
+      margin-left: 0;
+    }
+
+    .navbar-nav{
+      float: right;
+
+      li a{
+        text-transform: uppercase;
+        color: @red;
+        background: @black;
+        font-weight: 700;
+        font-size: 24px;
+        margin-right: 40px;
+
+        &:hover, &:active{
+          color: lighten(@red, 15%);
+          background: @black;
+        }
+
+
+      }
+
+      li.active, li.active:active, li.active:hover{
+        a{
+          color: lighten(@red, 15%);
+          background: @black;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+.banner .container .navbar-brand{ background-image: url("../img/logo.png"); }
+.svg .banner .container .navbar-brand{ background-image: url("../img/logo.png"); }
+
 //temp fix
 .container-full{
   width: 1200px;
@@ -112,6 +164,7 @@ body {
   padding-bottom: 100px;
   padding-left: 20px;
   text-align: right;
+  color: @tan;
   background-color: @red;
   text-shadow: 10px 10px 50px @black;
 }
@@ -225,7 +278,7 @@ body {
 
   }//end links
 
-
+  
 
   // for bottom border
   .content{
@@ -245,12 +298,18 @@ body {
   
     span{
       color: @darkGrey;
+      font-style: italic;
       margin-left: 6px;
       margin-right: 18px;
       text-transform: uppercase;
 
     }
 
+  }
+
+
+  .social-footer-links{
+    float: right;
   }
 
 } //end footer
@@ -260,7 +319,7 @@ body {
    Pages
    ========================================================================== */
 @import "pages/home.less";
-
+@import "pages/about.less";
 
 /* ==========================================================================
    WordPress Generated Classes
