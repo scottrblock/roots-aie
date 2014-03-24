@@ -4,7 +4,7 @@
  */
 ?>
 <div id="fearless-education">
-  <div class="special-container">
+  <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-6">
         <div class="header">
@@ -26,7 +26,7 @@
   </div>
 </div>
 <div id="the-latest">
-  <div class="container-full">
+  <div class="container">
     <div class="row">
       <div class="col-md-4">
         <h1 class="reg-heading">The Latest</h1>
@@ -172,6 +172,51 @@
   </div>
 </div>
 
+<div id="mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Mission</h1>
+      </div>
+      <div class="col-md-5">
+        <h4 class="mission-subhead">The Academy - so what is it that we do, exactly?</h4>
+        <p>
+          Our mission is to engage all UMD students in 
+          innovation & entrepreneurship to prepare them 
+          to tackle the world’s toughest problems.
+        </p>
+        <h5 class="mission-subhead-letter first">Skills our students gain - </h5>
+        <p>
+          Our students completely reimagine the landscape by 
+          developing deep empathy for potential stakeholders, 
+          reframing problems, and trying unexpected & game-changing
+          solutions.
+        </p>
+        <h5 class="mission-subhead-letter">Who we are -</h5>
+        <p>
+          Operating directly out of the Office of the President and 
+          the Office of the Provost, our core team is multi-disciplinary, 
+          creative and has a “bias to yes” attitude. We collaborate with 
+          an extended team of I&E-related programs & departments across 
+          campus that are passionate about creating innovation opportunities 
+          in all 12 colleges & schools.
+        </p>
+      </div>
+      <div class="col-md-6 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="post-it"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="post-it"></div>
+            <div class="post-it"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="quote">
   <div class="container">
     <div class="row">
@@ -184,51 +229,6 @@
     </div>
   </div>
 </div>
-<div id="welcome">
-  <div class="container-full">
-    <div class="row">
-      <div class="col-md-4">
-        <h1 class="reg-heading">Welcome</h1>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row content">
-      <div class="col-md-3"><img src="../public/images/alienchang.jpg" alt=""></div>
-      <div class="col-md-7 letter">
-        <p><span class="intro">WELCOME TO THE ACADEMY </span>for Innovation and Entrepreneurship 
-          at the University of Maryland.  The Academy is a signature 
-          initiative to infuse the University with a culture of 
-          innovation and entrepreneurship across all colleges, 
-          building on the institution's excellence as a research 
-          university. <br><br>Our mission is to support both the curricular 
-          and experiential education of all students so that they 
-          are inspired and empowered to translate creative ideas 
-          into enterprising solutions that solve problems whether 
-          economic, societal, technological, or cultural and 
-          thereby create value.  The Academy embodies the core 
-          land-grant university ideal of putting knowledge into 
-          action.  This is where ideas—Fearless Ideas—are 
-          transformed to impact. <br><br>The Office of the President 
-          and the Office of the Provost created the Academy to underscore 
-          the continual commitment this University has to make an impact on
-          the lives of students and faculty so that they can make positive 
-          difference in the world.  There is already an incredible foundation 
-          of entrepreneurial courses and programs here, built over 25 years.  
-          Our goal is to build on that foundation to grow existing, successful 
-          programs nd to launch new courses and initiatives to address new needs 
-          and opportunities. <br><br>Exciting new initiatives are coming soon, but 
-          in the meantime, there are dozens of exciting entrepreneurial
-          programs, events and competitions across campus year-round.  
-          We encourage everyone to learn more about such programs as Innovation 
-          Fridays, UMD Startup Boot Camp, Cupid's Cup, Social Value Symposium, 
-          Do Good Challenge, UMD Business Model Competition, ACC Clean Energy 
-          Challenge, and the annual Invention of the Year.  Details on all of these 
-          programs—and more—can be found on this website. <br><br>Sincerely,<br><br><span class="who-is-it">Dean Chang</span><br><span class="what-does-he-do">Associate Vice President for Innovation and Entrepreneurship</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <?php get_template_part('templates/content', 'page'); ?>
