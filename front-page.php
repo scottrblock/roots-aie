@@ -159,7 +159,7 @@
       
   </div>
 </div>
-<div class="quote">
+<div class="quote quote-1">
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-2">
@@ -217,7 +217,7 @@
   </div>
 </div>
 
-<div class="quote">
+<div class="quote quote-2">
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-2">
