@@ -1,1 +1,1 @@
-<?php `git pull`;
+<?php `cd wp-content/themes/roots-aie && git pull`;
