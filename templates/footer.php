@@ -7,7 +7,7 @@
             <form id="email" method="you decide" action="your call bro">
               <input id="email-input" type="email" placeholder="email address">
             </form>
-            <p>Stay in the loop with our newsletter. We can’t wait to update you on what’s happening!</p>
+            <p>Stay in the loop with our newsletter. Input your email and press enter.</p>
           </div>
         </div>
       </div>
@@ -66,14 +66,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p>&copy; <?php echo date('Y'); ?> University of Maryland <?php bloginfo('name'); ?></p>
+          <p>&copy; <?php echo date('Y'); ?> University of Maryland, <?php bloginfo('name'); ?></p>
         </div>
         <div class="col-md-6">
           <div class="social-footer-links clearfix">
-            <a href="https://www.facebook.com/UMDInnovation"><i class="fa fa-facebook"><span>Facebook</span></i></a>
-            <a href="https://twitter.com/InnovationUMD"><i class="fa fa-twitter"><span> Twitter </span></i></a>
-            <a href="#linkedin"><i class="fa fa-linkedin"><span> Linkedin </span></i></a>
-            <a href="maailto:deanc@umd.edu"><i class="fa fa-envelope"><span> Email </span></i></a>   
+            <a href="https://www.facebook.com/UMDInnovation" target="_blank"><i class="fa fa-facebook"><span>Facebook</span></i></a>
+            <a href="https://twitter.com/InnovationUMD" target="_blank"><i class="fa fa-twitter"><span> Twitter </span></i></a>
+            <a href="#linkedin" target="_blank"><i class="fa fa-linkedin"><span> Linkedin </span></i></a>
+            <a href="mailto:deanc@umd.edu" target="_blank"><i class="fa fa-envelope"><span> Email </span></i></a>   
           </div>
         </div>
       </div>

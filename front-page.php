@@ -3,7 +3,7 @@
  * Template Name: Home Page
  */
 ?>
-<div id="fearless-education">
+<div class="img-big" id="fearless-education">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-6">
@@ -154,9 +154,6 @@
         </div>
       </div>
     </div>
-  
-
-      
   </div>
 </div>
 <div class="quote quote-1">

@@ -17,7 +17,8 @@
 body{
   font-family: @sansSerif;
   font-size: 18px;
-  line-height: 1.428571429;
+  // line-height: 1.428571429; is this something specific?
+  line-height: 1.5;
   color: @black;
   background-color: @tan;
 
@@ -82,7 +83,7 @@ h6{
   margin: 0;
   color: @red;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 48px;
   padding: 20px 20px 20px 0px;
 }
@@ -93,14 +94,13 @@ body {
 }
 
 
-
 /* ==========================================================================
    Header
    ========================================================================== */
 
 .banner { 
   margin-bottom: 0;
-  padding-top: 20px;
+  padding: 20px 0;
   background: @black;
   border: 0;
   
@@ -126,7 +126,7 @@ body {
         margin-right: 40px;
 
         &:hover, &:active{
-          color: lighten(@red, 15%);
+          color: @tan;
           background: @black;
         }
 
@@ -318,7 +318,6 @@ body {
   
     span{
       color: @darkGrey;
-      font-style: italic;
       margin-left: 6px;
       margin-right: 18px;
       text-transform: uppercase;
