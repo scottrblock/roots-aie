@@ -44,7 +44,6 @@ h6,
 .h6 {
   font-family: @sansSerif;
   font-weight: 400;
-  line-height: 1.1;
   color: inherit;
 }
 
@@ -146,8 +145,8 @@ body {
 
 }
 
-.banner .container .navbar-brand{ background-image: url("../img/logo.png"); }
-.svg .banner .container .navbar-brand{ background-image: url("../img/logo.png"); }
+.banner .container .navbar-brand{ background-image: url("../img/logo.svg"); }
+.svg .banner .container .navbar-brand{ background-image: url("../img/logo.svg"); }
 
 //temp fix
 .container-full{
@@ -305,6 +304,12 @@ body {
    ========================================================================== */
 @import "pages/home.less";
 @import "pages/about.less";
+
+.page-content {
+  .main {
+    padding: 36px 0; 
+  }
+}
 
 /* ==========================================================================
    WordPress Generated Classes
