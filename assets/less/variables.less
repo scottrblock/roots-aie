@@ -1,10 +1,20 @@
 /*Colors*/
-@red: #df393d;
-@tan: #eae8dc;
-@darkTan: #d4d1c3;
-@darkGrey: #626366;
-@white: #fff;
-@black: #221e1f;
+@red:       #df393d;
+@tan:       #eae8dc;
+@darkTan:   #d4d1c3;
+@darkGrey:  #626366;
+@white:     #ffffff;
+@black:     #221e1f;
 
-@serif: 'Merriweather', serif;
+@serif:     'Merriweather', serif;
 @sansSerif: 'Merriweather Sans', sans-serif;
+
+.red-img(@path) {
+  background:
+    linear-gradient(rgba(223,57,61,.25),rgba(223,57,61,.25)),
+    url(@path) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

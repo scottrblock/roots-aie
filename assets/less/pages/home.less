@@ -20,23 +20,39 @@
   padding-bottom: 100px;
   padding-right: 0;
 
-  background:
-    linear-gradient(
-      rgba(223, 57, 61, 0.25), 
-      rgba(223, 57, 61, 0.25) 
-    ),
-    url(../img/pic1.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+  .red-img("../img/pic1.jpg");
 
   p{
+    font-size: 18px;
     padding: 0 30px 24px 24px;
     color: @tan;
   }
 
 }//end fearless education
+
+.quote{
+  h2{
+    font-weight: 700;
+    font-family: @serif;
+  }
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  text-align: right;
+  color: @tan;
+  background-color: @red;
+  text-shadow: 10px 10px 50px @black;
+}
+
+.quote-1{
+  .red-img("../img/pic2.jpg");
+}
+
+.quote-2{
+  // PIC 3 IS NOT AVAILIBLE YET
+}
 
 
 //the latest
