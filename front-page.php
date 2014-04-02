@@ -195,13 +195,16 @@
       </div>
       <div class="col-md-6 col-md-offset-1">
         <div class="row">
-          <div class="col-md-6">
-            <div class="post-it"></div>
+          
+          <div class="col-md-6"> <!-- One pic -->
+            <img src="assets/img/sticky-1.png" alt="Sticky Note">
           </div>
-          <div class="col-md-6">
-            <div class="post-it"></div>
-            <div class="post-it"></div>
+          
+          <div class="col-md-6"> <!-- Two pic -->
+            <img src="assets/img/sticky-2.png" alt="Sticky Note">
+            <img src="assets/img/sticky-3.png" alt="Sticky Note">
           </div>
+
         </div>
       </div>
     </div>
