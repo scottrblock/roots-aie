@@ -12,7 +12,7 @@
  */
 function roots_scripts() {
 <<<<<<< HEAD
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '46678a8c68bd7eaff861ed54154daa94');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '41babc616420118ca48cce07d7dc69dc');
 =======
   wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'dee91a9c67ed58f7d2f848892728289b');
 >>>>>>> bb5d27dfecf7fc0b6063ca8a3c106b8df13dd097
