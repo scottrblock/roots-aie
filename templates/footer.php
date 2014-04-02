@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <div class="row links">
+      <div class="row links hidden-sm hidden-xs">
         <div class="col-md-1">
           <ul> 
             <li><span>About</span></li>
