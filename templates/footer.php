@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="give-us-your-email">
-            <form id="email" method="you decide" action="your call bro">
-              <input id="email-input" type="email" placeholder="email address">
+            <form action="http://umd.us8.list-manage1.com/subscribe/post?u=b1f46e547ee00767ea212160a&amp;id=a7ffd32979" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email address">
             </form>
             <p>Stay in the loop with our newsletter. Input your email and press enter.</p>
           </div>
