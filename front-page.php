@@ -214,7 +214,7 @@
       <div class="col-md-10 col-md-offset-2">
         <h2>
           There is already an incredible foundation of entrepreneurial 
-          courses and programs here, built over 335 years.
+          courses and programs here, built over 25 years.
         </h2>
       </div>
     </div>
