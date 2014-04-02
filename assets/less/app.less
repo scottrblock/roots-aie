@@ -77,14 +77,48 @@ h6{
   padding-top:15px;
 }
 
-.ultra-heading{
-  font-weight: 800;
-  // font-size: 72px;
-  color: @red;
-  text-transform: uppercase;
-  background-color: @tan;
-  padding: 20px;
-  margin-bottom: 18px;
+// .ultra-heading{
+//   font-weight: 800;
+//   // font-size: 72px;
+//   color: @red;
+//   text-transform: uppercase;
+//   background-color: @tan;
+//   padding: 20px;
+//   margin-bottom: 18px;
+// }
+
+@media (min-width: @screen-sm-min) { 
+  .ultra-heading{
+    font-weight: 800; 
+    color: @red;
+    text-transform: uppercase;
+    background-color: @tan;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+}
+@media (min-width: @screen-md-min) { 
+  .ultra-heading{
+    font-weight: 800;
+    font-size: 72px;
+    color: @red;
+    text-transform: uppercase;
+    background-color: @tan;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: @screen-lg-min) { 
+  .ultra-heading{
+    font-weight: 800;
+    font-size: 72px;
+    color: @red;
+    text-transform: uppercase;
+    background-color: @tan;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
 }
 
 .reg-heading{
@@ -199,6 +233,9 @@ body {
 .hentry .byline { }
 .hentry .entry-content { }
 .hentry footer { }
+
+
+
 
 
 
