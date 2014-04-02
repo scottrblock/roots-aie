@@ -8,17 +8,11 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-6">
         <div class="header">
-          <h1 class="ultra-heading">Fearless Education</h1>
+          <h1 class="ultra-heading">Innovate Fearlessly</h1>
         </div>
         <div class="info">
           <p>
-            We are a community of faculty, staff, 
-            students and alumni dedicated to inspiring, 
-            developing and launching Fearless Ideas, the 
-            heart of innovation and entrepreneurship. 
-            Every corner of our campus, from the sciences 
-            and humanities to research and business, is 
-            committed to this vision.
+            At the Academy, we cultivate a campus of fearless innovators to reframe and disrupt the norm to bring about change. By empowering students to reimagine the landscape, not blend in, we prepare them to solve the world’s toughest problems.
           </p>
         </div>
       </div>
