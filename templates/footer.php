@@ -52,7 +52,7 @@
         <div class="col-md-1 col-md-offset-2">
           <p><!-- picture --></p>
         </div>
-        <div class="col-md-3 col-md-offset-1">
+        <div class="col-md-3 col-md-offset-2">
           <p>
             <?php bloginfo('name'); ?>
             Office of the Provost, University of Maryland<br>3300 Symons Hall<br>College Park, MD 
