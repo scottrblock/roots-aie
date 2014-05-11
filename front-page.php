@@ -144,7 +144,46 @@
 
       <div class="col-md-6">
         <div id="twitter-posts">
-          <?php echo do_shortcode("[twitter-widget username='UMDInnovation' targetBlank='true' items='5' showts='181440000' showretweets='true' showintents='false' showfollow='false' hidefrom='true']"); ?>
+          <?php
+            define('TWEET_LIMIT', 5);
+            define('TWITTER_USERNAME', 'insidetheblock');
+            define('CONSUMER_KEY', 'ctGdLn4IHuMYueFawYw');
+            define('CONSUMER_SECRET', 'yPuZtcIEFQQLMXGHayYxAUcbjcD9H2whaJytx2H8v8');
+            define('ACCESS_TOKEN', '231350587-5JnkkRyyM8rhqo9ayDTEQvnOvW1EDUwqKjKCTnr1');
+            define('ACCESS_TOKEN_SECRET', 'P0iA0Qye6hCtQhEgDTmobsoaz4sufe9wfdbdjNPcq2zSU');
+
+            /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+            $settings = array(
+                'oauth_access_token' => ACCESS_TOKEN,
+                'oauth_access_token_secret' => ACCESS_TOKEN_SECRET,
+                'consumer_key' => CONSUMER_KEY,
+                'consumer_secret' => CONSUMER_SECRET
+            );
+            
+
+            # https://github.com/J7mbo/twitter-api-php
+            $tweets = tweetsQuery( $settings );
+            
+
+            # loop through all tweets
+            foreach($tweets as $t){
+              echo "<div class='info-box'>";
+                echo "<p class='desc'>";
+                  $date = strtotime($t->created_at);
+                  $text = twitterify( $t->text);
+
+                  echo $text;
+                  echo " - " . ago($date);
+
+
+                echo "</p>";
+              echo "</div>";
+
+
+            }
+
+          ?>
+
         </div>
       </div>
     </div>
